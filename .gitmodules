@@ -1,3 +1,4 @@
 [submodule "crazyflie/deps/crazyflie_tools"]
 	path = crazyflie/deps/crazyflie_tools
 	url = https://github.com/WilliamKaykay/crazyflie_tools.git
+	branch = master
