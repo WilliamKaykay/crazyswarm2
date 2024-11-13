@@ -248,27 +248,38 @@ all:
     stabilizer:
       estimator: 2 # 1: complementary, 2: kalman
       controller: 1 # 1: PID, 2: mellinger
-    # pid_attitude:
-    #   roll_kp: 10
-    #   roll_ki: 0
-    #   roll_kd: 0
-    #   pitch_kp: 10
-    #   pitch_ki: 0
-    #   pitch_kd: 0
-    # pid_rate:
-    #   roll_kp: 500
-    #   roll_ki: 500
-    #   roll_kd: 3.6
-    #   pitch_kp: 500
-    #   pitch_ki: 500
-    #   pitch_kd: 3.6
-    #   rateFiltEn: 1
-    # ring:
-    #   effect: 16 # 6: double spinner, 7: solid color, 16: packetRate
-    #   solidBlue: 255 # if set to solid color
-    #   solidGreen: 0 # if set to solid color
-    #   solidRed: 0 # if set to solid color
-    #   headlightEnable: 0
+    colAv:
+      enable: 1
+      ellipsoidX: 1.0
+      ellipsoidX: 1.0
+      ellipsoidX: 0.5
+      horizon: 4.0
+      maxSpeed: 0.05
+      sidestrpThrsh: 0.05
+
+    # enacble collision avoidance unblock it william Oct 4
+    
+    pid_attitude:
+      roll_kp: 10
+      roll_ki: 0
+      roll_kd: 0
+      pitch_kp: 10
+      pitch_ki: 0
+      pitch_kd: 0
+    pid_rate:
+      roll_kp: 500
+      roll_ki: 500
+      roll_kd: 3.6
+      pitch_kp: 500
+      pitch_ki: 500
+      pitch_kd: 3.6
+      rateFiltEn: 1
+    ring:
+      effect: 16 # 6: double spinner, 7: solid color, 16: packetRate
+      solidBlue: 255 # if set to solid color
+      solidGreen: 0 # if set to solid color
+      solidRed: 0 # if set to solid color
+      headlightEnable: 0
     locSrv:
       extPosStdDev: 1e-3
       extQuatStdDev: 0.5e-1
@@ -277,3 +288,4 @@ all:
   broadcasts:
     num_repeats: 15 # number of times broadcast commands are repeated
     delay_between_repeats_ms: 1 # delay in milliseconds between individual repeats
+
